@@ -16,3 +16,23 @@ import com.thirdparty.thirdparty.postService.PostService;
 
 @RestController
 @RequestMapping("/api")
+public class GetController {
+
+    @Autowired
+    private PostService postService;
+    
+    @GetMapping("/Getposts")
+    List<Map<String, Object>> getAllPosts(){
+        return postService.getPosts();
+    }
+
+    @PostMapping("/Postposts")
+    Map<String, Object> getAllPosts(@RequestBody Map<String, Object> payload){
+        return postService.insertPosts(payload);
+    }
+
+    @PutMapping("/updatePosts/{id}")
+    Map<String, Object> updatePost(@RequestBody Map<String,Object> payload, @PathVariable int id){
+        return postService.updatePosts(payload, id);
+    }
+}
