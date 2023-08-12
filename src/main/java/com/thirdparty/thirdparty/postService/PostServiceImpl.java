@@ -14,3 +14,15 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import lombok.val;
+
+@Service
+public class PostServiceImpl implements PostService{
+
+    String baseUrl = "https://jsonplaceholder.typicode.com";
+
+    StringBuilder sb = new StringBuilder(baseUrl);
+
+    String GET = "/posts";
+
+    String GETBYID = "/posts/";
+}
