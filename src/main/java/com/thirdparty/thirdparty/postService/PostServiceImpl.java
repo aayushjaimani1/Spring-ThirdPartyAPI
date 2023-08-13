@@ -25,4 +25,10 @@ public class PostServiceImpl implements PostService{
     String GET = "/posts";
 
     String GETBYID = "/posts/";
+    private HttpHeaders gethttpHeaders(){
+        HttpHeaders headers = new HttpHeaders();
+        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        return headers;
+    }
 }
