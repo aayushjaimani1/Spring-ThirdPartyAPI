@@ -25,6 +25,15 @@ public class PostServiceImpl implements PostService{
     String GET = "/posts";
 
     String GETBYID = "/posts/";
+
+    @Override
+    public List<Map<String, Object>> getPosts() {
+        HttpEntity<Void> httpEntity = new HttpEntity<>(gethttpHeaders());
+        String url = sb.append(GET).toString();
+        val response = restTemplate.exchange(url,HttpMethod.GET, httpEntity, List.class);
+        return response.getBody();
+    }
+    
     private HttpHeaders gethttpHeaders(){
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
