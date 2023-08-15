@@ -48,4 +48,12 @@ public class PostServiceImpl implements PostService{
         val response = restTemplate.exchange(url, HttpMethod.POST, httpEntity, Map.class);
         return response.getBody();
     }
+
+    @Override
+    public Map<String, Object> updatePosts(Map<String, Object> payload, int id) {
+        HttpEntity <Map> httpEntity = new HttpEntity<>(payload,gethttpHeaders());
+        String url = sb.append(GETBYID).append(id).toString();
+        val response = restTemplate.exchange(url, HttpMethod.PUT, httpEntity, Map.class);
+        return response.getBody();
+    }
 }
