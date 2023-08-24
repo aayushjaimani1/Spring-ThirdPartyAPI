@@ -34,12 +34,12 @@ public class PostServiceImpl implements PostService{
         return response.getBody();
     }
 
-    private HttpHeaders gethttpHeaders(){
-        HttpHeaders headers = new HttpHeaders();
-        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-        headers.setContentType(MediaType.APPLICATION_JSON);
-        return headers;
-    }
+    // private HttpHeaders gethttpHeaders(){
+    //     HttpHeaders headers = new HttpHeaders();
+    //     headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+    //     headers.setContentType(MediaType.APPLICATION_JSON);
+    //     return headers;
+    // }
 
     @Override
     public Map<String, Object> insertPosts(Map<String, Object> payload) {
