@@ -1,4 +1,4 @@
-package com.thirdparty.thirdparty.controller;
+package main.java.com.thirdparty.thirdparty.controller;
 
 import java.util.List;
 import java.util.Map;
@@ -31,8 +31,8 @@ public class GetController {
         return postService.insertPosts(payload);
     }
 
-    @PutMapping("/updatePosts/{id}")
-    Map<String, Object> updatePost(@RequestBody Map<String,Object> payload, @PathVariable int id){
-        return postService.updatePosts(payload, id);
-    }
+    // @PutMapping("/updatePosts/{id}")
+    // Map<String, Object> updatePost(@RequestBody Map<String,Object> payload, @PathVariable int id){
+    //     return postService.updatePosts(payload, id);
+    // }
 }
