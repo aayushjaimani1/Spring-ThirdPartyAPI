@@ -31,8 +31,8 @@ public class GetController {
         return postService.insertPosts(payload);
     }
 
-    // @PutMapping("/updatePosts/{id}")
-    // Map<String, Object> updatePost(@RequestBody Map<String,Object> payload, @PathVariable int id){
-    //     return postService.updatePosts(payload, id);
-    // }
+    @PutMapping("/updatePosts/{id}")
+    Map<String, Object> updatePost(@RequestBody Map<String,Object> payload, @PathVariable int id){
+        return postService.updatePosts(payload, id);
+    }
 }
