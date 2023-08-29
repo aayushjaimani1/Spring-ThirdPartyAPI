@@ -26,10 +26,10 @@ public class GetController {
         return postService.getPosts();
     }
 
-    // @PostMapping("/Postposts")
-    // Map<String, Object> getAllPosts(@RequestBody Map<String, Object> payload){
-    //     return postService.insertPosts(payload);
-    // }
+    @PostMapping("/Postposts")
+    Map<String, Object> getAllPosts(@RequestBody Map<String, Object> payload){
+        return postService.insertPosts(payload);
+    }
 
     @PutMapping("/updatePosts/{id}")
     Map<String, Object> updatePost(@RequestBody Map<String,Object> payload, @PathVariable int id){
