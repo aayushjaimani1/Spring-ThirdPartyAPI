@@ -21,10 +21,10 @@ public class GetController {
     @Autowired
     private PostService postService;
     
-    @GetMapping("/Getposts")
-    List<Map<String, Object>> getAllPosts(){
-        return postService.getPosts();
-    }
+    // @GetMapping("/Getposts")
+    // List<Map<String, Object>> getAllPosts(){
+    //     return postService.getPosts();
+    // }
 
     @PostMapping("/Postposts")
     Map<String, Object> getAllPosts(@RequestBody Map<String, Object> payload){
