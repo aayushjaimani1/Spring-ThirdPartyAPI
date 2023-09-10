@@ -15,5 +15,17 @@ import com.task.task.model.UserDetails;
 @RestController
 @RequestMapping("/submit-details")
 public class userController {
+    @Autowired
+    private RestTemplate restTemplate;
     
+
+    @PostMapping("/post")
+    public ResponseEntity<String> submitDetails(){
+        UserDetails userDetails = new UserDetails();
+        userDetails.setName("Aayush");
+        userDetails.setCollege("VIT Bhopal University");
+        userDetails.setEmail("aayush.2442@gmail.com");
+        userDetails.setDob("24-04-2002");
+        userDetails.setRegNo(538);
+    }
 }
