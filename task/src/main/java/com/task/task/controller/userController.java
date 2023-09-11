@@ -27,5 +27,20 @@ public class userController {
         userDetails.setEmail("aayush.2442@gmail.com");
         userDetails.setDob("24-04-2002");
         userDetails.setRegNo(538);
+
+        String apiUrl = "http://localhost:8080/ayush/submit-details/post";
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+        HttpEntity<UserDetails> request = new HttpEntity<>(userDetails, headers);
+        ResponseEntity<String> response = restTemplate.postForEntity(apiUrl, request,String.class);
+
+        if(response.getStatusCode() == HttpStatus.OK){
+            return ResponseEntity.ok("Data sent successfully to the api");
+        }else{
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to send data to the api.");
+
+        }
     }
 }
