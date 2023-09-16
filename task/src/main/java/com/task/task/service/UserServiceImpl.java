@@ -10,5 +10,8 @@ import com.task.task.model.UserDetails;
 
 @Service
 public class UserServiceImpl implements UserService{
-    
+    @Override
+    public UserDetails savesUserDetails(UserDetails user){
+        return userrepo.save(user);
+    }
 }
