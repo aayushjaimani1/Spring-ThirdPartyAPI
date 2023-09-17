@@ -14,4 +14,9 @@ public class UserServiceImpl implements UserService{
     public UserDetails savesUserDetails(UserDetails user){
         return userrepo.save(user);
     }
+
+    @Override
+    public List<UserDetails> getAllDetails() {
+        return userrepo.findAll();
+    }
 }
