@@ -10,6 +10,10 @@ import com.task.task.model.UserDetails;
 
 @Service
 public class UserServiceImpl implements UserService{
+
+    @Autowired
+    private taskrepo userrepo;
+    
     @Override
     public UserDetails savesUserDetails(UserDetails user){
         return userrepo.save(user);
