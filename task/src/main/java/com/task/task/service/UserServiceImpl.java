@@ -1,4 +1,4 @@
-package com.task.task.service;
+package main.java.com.task.task.service;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ public class UserServiceImpl implements UserService{
 
     @Autowired
     private taskrepo userrepo;
-    
+
     @Override
     public UserDetails savesUserDetails(UserDetails user){
         return userrepo.save(user);
