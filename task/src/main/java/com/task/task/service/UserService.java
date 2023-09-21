@@ -1,4 +1,4 @@
-package com.task.task.service;
+package main.java.com.task.task.service;
 
 import java.util.List;
 
