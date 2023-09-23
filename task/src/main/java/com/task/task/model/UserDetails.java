@@ -1,4 +1,4 @@
-package com.task.task.model;
+package main.java.com.task.task.model;
 
 
 import lombok.Data;
