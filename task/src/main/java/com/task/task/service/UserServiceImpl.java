@@ -14,10 +14,10 @@ public class UserServiceImpl implements UserService{
     @Autowired
     private taskrepo userrepo;
 
-    // @Override
-    // public UserDetails savesUserDetails(UserDetails user){
-    //     return userrepo.save(user);
-    // }
+    @Override
+    public UserDetails savesUserDetails(UserDetails user){
+        return userrepo.save(user);
+    }
 
     @Override
     public List<UserDetails> getAllDetails() {
